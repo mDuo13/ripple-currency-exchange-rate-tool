@@ -17,6 +17,7 @@ $(document).ready(function() {
     cxr.find("form").submit(do_submit);
     cxr.find("select.from").change(gen_request_json);
     cxr.find("select.to").change(gen_request_json);
+    cxr.find(".flip").click(flip_currencies);
 
 });
 
@@ -38,6 +39,18 @@ function gen_request_json() {
     }, null, 2);
     
     cxr.find("textarea.request").val(new_json);
+}
+
+
+function flip_currencies() {
+    var from_currency = cxr.find("select.from").val();
+    var to_currency = cxr.find("select.to").val();
+    
+    cxr.find("select.from").val(to_currency);
+    cxr.find("select.to").val(from_currency);
+    
+    //update the json to reflect new values
+    gen_request_json();
 }
 
 function do_submit() {
