@@ -77,6 +77,6 @@ function get_response(body,status,xhr) {
         base = body[i].base.currency;
         counter = body[i].counter.currency;
         rate = body[i].last;
-        human.append('<p>By spending 1 <span class="from currency">'+base+'</span>, you can buy <span class="to amount">'+rate+'</span> <span class="to currency">'+counter+'</span>.')
+        human.append('<p>By spending 1 <span class="from currency">'+base+'</span>, you can buy <span class="to amount">'+rate+'</span> <span class="to currency">'+counter+'</span>.</p>');
     }
 }
