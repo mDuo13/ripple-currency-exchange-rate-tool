@@ -1,5 +1,10 @@
 .cxr .json {
     width: 40em;
-    height: 20em;
+    height: 5em;
     display: block;
+}
+
+.cxr .request {
+    width: 38em;
+    font-family: monospace;
 }

@@ -21,6 +21,7 @@
         <option value="USD" selected="selected">U.S. Dollar (USD)</option>
         <option value="BTC">Bitcoin (BTC)</option>
         <option value="CNY">Chinese Yuan (CNY)</option>
+        <option value="JPY">Japanese Yen (JPY)</option>
         <option value="XRP">Ripple XRP</option>
     </select><!--/#cxr_1_from-->
     
@@ -29,14 +30,21 @@
         <option value="USD">U.S. Dollar (USD)</option>
         <option value="BTC">Bitcoin (BTC)</option>
         <option value="CNY" selected="selected">Chinese Yuan (CNY)</option>
+        <option value="JPY">Japanese Yen (JPY)</option>
         <option value="XRP">Ripple XRP</option>
     </select><!--/#cxr_1_to-->
     
     <input type="button" value="Flip" class="flip" />
     
-    <textarea class="json request"></textarea>
+    <p>
+        <input type="checkbox" checked="checked" id="strict_conversions_check" />
+        <label for="strict_conversions_check">Require 10+ exchanges to determine an exchange rate.</label>
+    </p>
     
-    <input type="submit" value="Submit" />
+    <p>
+        <input type="submit" value="GET" />
+        <span class="request"></span>
+    </p>
     
     <h2>Response:</h2>
     <textarea class="json response"></textarea>
